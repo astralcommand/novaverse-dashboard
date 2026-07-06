@@ -335,9 +335,9 @@ body {
 
     text-align: center;
 
-    font-size: 56px;
+    font-size: 48px;
 
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 
     font-weight: 600;
     font-family: Cormorant Garanmond , serif;
@@ -352,12 +352,12 @@ body {
 
     align-items: center;
 
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 
 }
 .meter-label {
 
-    font-size: 40px;
+    font-size: 34px;
 
     width: 180px;
     flex-shrink: 0;
@@ -368,6 +368,8 @@ body {
     display: flex;
 
     gap: 6px;
+
+    align-items: center;
 
 }
 .light {
