@@ -15,8 +15,8 @@ async function loadDashboardData() {
     );
 
     // Get the newest response row
-    const row = json.table.rows[0].c;
-
+    const rows = json.table.rows;
+    const row = rows[rows.length - 1].c;
     // Build the Dawn data object
     const dawnData = {
         moon: row[1].v,
@@ -70,3 +70,4 @@ function updateCapacity(id, value) {
 }
 
 loadDashboardData();
+setInterval(loadDashboardData, 60000);
