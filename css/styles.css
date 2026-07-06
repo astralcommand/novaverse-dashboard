@@ -42,11 +42,11 @@ body {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     align-items: center;
 
-    padding: 0 50px;
+    padding: 0 25px;
 }
 
 .middle {
@@ -64,7 +64,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 50px;
+    padding: 0 25px;
     height: 560px;
 }
 .capacity {
@@ -112,7 +112,9 @@ body {
     letter-spacing: .03em;
 }
 .intention-panel {
-    width: 500px;
+    flex: 1;
+    min-width: 0;
+    width: auto;
 
     display: flex;
     flex-direction: column;
@@ -137,7 +139,9 @@ body {
     font-weight: 400;
 }
 .weather-panel {
-    width: 500px;
+    flex: 1;
+    min-width: 0;
+    width: auto;
     display: flex;
     flex-direction: column;
 
@@ -175,7 +179,9 @@ body {
     
 }
 .activity-panel {
-    width: 500px;
+    flex: 1;
+    min-width: 0;
+    width: auto;
 
     display: flex;
     flex-direction: column;
@@ -200,7 +206,9 @@ body {
     margin-top: 35px;
 }
 .agenda-panel {
-    width: 500px;
+    flex: 1;
+    min-width: 0;
+    width: auto;
 
     display: flex;
     flex-direction: column;
@@ -249,7 +257,7 @@ body {
     font-weight: 600;
     font-family: Cormorant Garanmond , serif;
     letter-spacing: .03em;
-    width: 400px;
+    width: 100%;
     margin-top: 25px;
     margin-bottom: 20px;
 }
@@ -342,7 +350,8 @@ body {
 
     font-size: 40px;
 
-    width: 280px;
+    width: 180px;
+    flex-shrink: 0;
 
 }
 .lights {
