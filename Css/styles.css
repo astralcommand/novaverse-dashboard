@@ -1,0 +1,370 @@
+:root {
+
+    --moonlight: #e1ac24;
+    --background: rgba(8, 6, 20, 0.98);
+    --border: rgba(255,255,255,.10);
+
+    --glow: rgba(190,155,255,.18);
+
+}
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #e2d0a4;
+    background-image: url("../assets/backgrounds/dawn.png");    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 30px;
+    gap: 20px;
+}
+
+.orientation {
+    height: 275px;
+
+    background: rgba(37, 26, 39, 0.88);    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,.35),
+        0 0 20px rgba(170,120,255,.08);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 50px;
+}
+
+.middle {
+    display: flex;
+    gap: 50px;
+    flex: 1;
+}
+
+.commitments {
+    flex: 1;
+    background: rgba(37, 26, 39, 0.78);    border-radius: 28px;
+    box-shadow:
+    0 8px 32px rgba(0,0,0,.35),
+    0 0 20px rgba(170,120,255,.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 50px;
+    height: 600px;
+}
+.capacity {
+    flex: 1;
+    background: rgba(37, 26, 39, 0.78);    border-radius: 28px;
+    box-shadow:
+    0 8px 32px rgba(0,0,0,.35),
+    0 0 20px rgba(170,120,255,.08);
+    display: flex;
+    flex-direction: column;
+   
+    align-items: flex-start;
+    padding: 50px;
+    height: 600px;
+}
+
+
+.time-panel {
+    text-align: center;
+}
+
+
+#date {
+    font-size: 66px;
+    margin-bottom: 10px;
+    opacity: .9;
+    font-weight: 600;
+    font-family: Cormorant Garanmond , serif;
+    letter-spacing: .03em;
+}
+
+#time {
+    font-size: 66px;
+    font-weight: 300;
+}
+
+
+#moon {
+    font-size: 34px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: .75;
+    font-weight: 600;
+    font-family: Cormorant Garanmond , serif;
+    letter-spacing: .03em;
+}
+.intention-panel {
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.intention-title {
+    font-size: 48px;
+    opacity: .75;
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-family: Cormorant Garanmond , serif;
+    letter-spacing: .03em;
+}
+
+#intention {
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+.weather-panel {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+#weather-icon{
+
+    width: 120px;
+
+    height:120px;
+
+    display:block;
+
+    margin-top: 10px;
+
+}
+
+#temperature {
+    font-size: 56px;
+    font-weight: 300;
+}
+
+#weather {
+    font-size: 46px;
+    font-family: Cormorant Garamond , serif;
+    
+}
+
+#high-low {
+    font-size: 38px;
+    opacity: .75;
+    
+}
+.activity-panel {
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+.activity-title {
+    font-size: 56px;
+    font-weight: 600;
+    font-family: Cormorant Garanmond , serif;
+    letter-spacing: .03em;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#activity{
+    font-size: 56px;
+}
+#duration {
+    font-size: 56px;
+    margin-top: 35px;
+}
+.agenda-panel {
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+.agenda-empty{
+
+    text-align:center;
+
+    margin-top:70px;
+
+    font-size:32px;
+
+    opacity:.75;
+
+}
+
+.agenda-group{
+
+    margin-bottom:25px;
+
+}
+
+.work{
+
+    color:#C9A8FF;
+
+}
+
+.events{
+
+    color:#8EDFCF;
+
+}
+
+.classes{
+
+    color:#F2D28C;
+
+}
+.agenda-title{
+    font-size: 56px;
+    font-weight: 600;
+    font-family: Cormorant Garanmond , serif;
+    letter-spacing: .03em;
+    width: 400px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.agenda-group {
+
+    margin-bottom: 25px;
+    font-size: 46px;
+}
+
+.agenda-item {
+
+    font-size: 34px;
+
+    margin-top: 4px;
+}
+.agenda-time {
+
+    font-size: 32px;
+
+    opacity: .7;
+}
+.ornament-divider {
+    position: relative;
+    text-align: center;
+    color: var(--moonlight);
+    margin: .5px 0;
+    font-size: 18px;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 38%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--moonlight)
+    );
+}
+
+.ornament-divider::before {
+    left: 0;
+}
+
+.ornament-divider::after {
+    right: 0;
+    background: linear-gradient(
+        to left,
+        transparent,
+        var(--moonlight)
+    );
+}
+.capacity {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 35px;
+
+}
+.capacity-title {
+
+    text-align: center;
+
+    font-size: 66px;
+
+    margin-bottom: 30px;
+
+    font-weight: 600;
+    font-family: Cormorant Garanmond , serif;
+    letter-spacing: .03em;
+
+}
+.meter {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+
+}
+.meter-label {
+
+    font-size: 40px;
+
+    width: 280px;
+
+}
+.lights {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+.light {
+
+    width: 16px;
+
+    height: 16px;
+
+    border-radius: 999px;
+    width: 18px;
+    height: 12px;
+
+    background: rgba(255,255,255,.12);
+
+}
+.light.active {
+
+    background: var(--moonlight);
+
+    box-shadow: 0 0 12px rgba(246,233,201,.6);
+
+}

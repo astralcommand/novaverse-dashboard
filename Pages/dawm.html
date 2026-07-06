@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawn Protocol</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <header class="orientation">
+
+            <div class="weather-panel">
+
+                <img id="weather-icon" />
+            
+                <div id="temperature">--°</div>
+            
+                <div id="weather">Loading...</div>
+            
+            </div>
+        
+            <div class="time-panel">
+        
+                <div id="date">
+                    Monday, January 1
+                </div>
+
+                <div id="time">
+                    12:00
+                </div>
+        
+        
+        
+                <div id="moon">
+                    🌒 Waxing Crescent
+                </div>
+        
+            </div>
+        
+            <div class="intention-panel">
+
+                <div class="intention-title">
+                    ✦ Today's Intention ✦
+                </div>
+                <div class="ornament-divider">
+                    ──────────── ✦ ────────────
+                </div>
+            
+                <div id="intention">
+                    Build with Curiosity
+                </div>
+            
+            </div>
+        
+        </header>
+
+        <main class="middle">
+
+            <section class="commitments">
+                
+                <div class="activity-panel">
+                    <div class="activity-title">
+                        ✦ Morning ✦ Activity 
+                    </div>
+                    <div class="ornament-divider">
+                        ───────── ✦ ─────────    
+                                    </div>
+
+                    <div id="activity">
+                        Read a book
+                    </div>
+                    <div id="duration">
+                        30 mins
+                    </div>
+                    
+                </div>
+                <div class="agenda-panel">
+                    <div class="agenda-title">
+                        Today's Agenda
+                    </div>
+                    <div id="agenda"></div>
+                </div>
+
+                    
+
+                
+            </section>
+
+            <section class="capacity">
+
+                <div class="capacity-title">
+                    ✦ Capacity & Conditions ✦
+                </div>
+               
+                <div class="meter">
+                    <div class="meter-label">
+                        Energy
+                    </div>
+            
+                    <div class="lights" id="energy">
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+            
+                </div>
+                </div>
+            
+                   
+                
+                <div class="meter">
+
+                    <div class="meter-label">
+                        Body
+                    </div>
+                
+                    <div class="lights" id="body">
+                
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                
+                    </div>
+                
+                </div>
+                <div class="meter">
+
+                    <div class="meter-label">
+                        Focus
+                    </div>
+                
+                    <div class="lights" id="focus">
+                
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                
+                    </div>
+                
+                </div>
+                <div class="meter">
+
+                    <div class="meter-label">
+                        Mood Level
+                    </div>
+                
+                    <div class="lights" id="mood">
+                
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                
+                    </div>
+                
+                </div>
+                <div class="meter">
+
+                    <div class="meter-label">
+                        Sleep
+                    </div>
+                
+                    <div class="lights" id="sleep">
+                
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                        <span class="light active"></span>
+                
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                        <span class="light"></span>
+                
+                    </div>
+                
+                </div>
+            
+            </section>
+
+        </main>
+
+       
+
+    </div>
+    <script src="../Js/clock.js"></script>
+    <script src="../Js/googleSheets.js"></script>
+    <script src="../Js/calendar.js"></script>
+    <script src="../js/weather.js"></script>
+</body>
+</html>
