@@ -51,24 +51,27 @@ body {
 
 .middle {
     display: flex;
+    min-width: 0;
     gap: 50px;
     flex: 1;
 }
 
 .commitments {
     flex: 1;
+    min-width: 0;
     background: rgba(37, 26, 39, 0.78);    border-radius: 28px;
     box-shadow:
     0 8px 32px rgba(0,0,0,.35),
     0 0 20px rgba(170,120,255,.08);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     padding: 0 25px;
     height: 560px;
 }
 .capacity {
     flex: 1;
+    min-width: 0;
     background: rgba(37, 26, 39, 0.78);    border-radius: 28px;
     box-shadow:
     0 8px 32px rgba(0,0,0,.35),
@@ -179,7 +182,7 @@ body {
     
 }
 .activity-panel {
-    flex: 1;
+    flex: 0 1 45%;
     min-width: 0;
     width: auto;
 
@@ -206,7 +209,7 @@ body {
     margin-top: 35px;
 }
 .agenda-panel {
-    flex: 1;
+    flex: 0 1 45%;
     min-width: 0;
     width: auto;
 
@@ -380,4 +383,9 @@ body {
 
     box-shadow: 0 0 12px rgba(246,233,201,.6);
 
+}
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
