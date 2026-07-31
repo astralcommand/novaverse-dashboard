@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: dawn-dashboard
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NOTION_API_KEY
+        sync: false
+      - key: NOTION_DATA_SOURCE_ID
+        value: e6d360ca-253f-839e-9345-078ae3fac590

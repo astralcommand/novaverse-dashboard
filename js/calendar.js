@@ -29,6 +29,8 @@ const CALENDARS = {
 
 };
 
+let currentEvents = [];
+
 async function loadAllCalendars() {
 
     const today = new Date();
@@ -85,7 +87,78 @@ async function loadAllCalendars() {
 
     );
 
-    renderAgenda(allEvents);
+    currentEvents = allEvents;
+    renderAgenda(currentEvents);
+
+}
+
+function formatRemainingTime(milliseconds) {
+
+    const totalMinutes = Math.max(0, Math.ceil(milliseconds / 60000));
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+
+    if (hours === 0) {
+        return `${minutes}m`;
+    }
+
+    return minutes === 0 ? `${hours}h` : `${hours}h ${minutes}m`;
+
+}
+
+function getEventStatus(event) {
+
+    if (!event.start.dateTime || !event.end.dateTime) {
+        return "All day";
+    }
+
+    const now = new Date();
+    const start = new Date(event.start.dateTime);
+    const end = new Date(event.end.dateTime);
+
+    if (now < start) {
+        return `starts in ${formatRemainingTime(start - now)}`;
+    }
+
+    if (now < end) {
+        return `ends in ${formatRemainingTime(end - now)}`;
+    }
+
+    return "Complete";
+
+}
+
+function getLeaveStatus(event) {
+
+    if (!["work", "events"].includes(event.calendar) || !event.start.dateTime) {
+        return "";
+    }
+
+    const now = new Date();
+    const start = new Date(event.start.dateTime);
+    const leaveAt = new Date(start.getTime() - 15 * 60000);
+
+    if (now < leaveAt) {
+        return `Leave in ${formatRemainingTime(leaveAt - now)}`;
+    }
+
+    if (now < start) {
+        return "Leave now";
+    }
+
+    return "In progress";
+
+}
+
+function getCalendarLabel(event) {
+
+    const labels = {
+        work: "👜 Work",
+        events: "✨ Events",
+        classes: "📚 Classes"
+    };
+
+    return labels[event.calendar];
 
 }
 
@@ -113,47 +186,20 @@ function renderAgenda(events){
 
     events.forEach(event=>{
 
-        const start = new Date(event.start.dateTime);
-
-        const end = new Date(event.end.dateTime);
+        const leaveStatus = getLeaveStatus(event);
 
         agenda.innerHTML += `
 
-            <div class="agenda-group">
+            <div class="status-event">
 
-                <div class="agenda-item ${event.calendar}">
+                <div class="status-event-category ${event.calendar}">${getCalendarLabel(event)}</div>
+                <div class="status-event-title">
 
-                    ${event.summary}
-
-                </div>
-
-                <div class="agenda-time">
-
-                    ${start.toLocaleTimeString([],{
-
-                        hour:'numeric',
-
-                        minute:'2-digit'
-
-                    })}
-
-                    –
-
-                    ${end.toLocaleTimeString([],{
-
-                        hour:'numeric',
-
-                        minute:'2-digit'
-
-                    })}
+                    ${event.summary} ${getEventStatus(event)}
 
                 </div>
 
-                <div class="ornament-divider">
-
-                    ──────────── ✦ ────────────
-
-                </div>
+                ${leaveStatus ? `<div class="status-event-leave">${leaveStatus}</div>` : ""}
 
             </div>
 
@@ -164,3 +210,4 @@ function renderAgenda(events){
 }
 
 loadAllCalendars();
+setInterval(() => renderAgenda(currentEvents), 60000);

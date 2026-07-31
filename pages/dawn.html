@@ -47,7 +47,7 @@
             <div class="intention-panel">
 
                 <div class="intention-title">
-                    ✦ Today's Intention ✦
+                    ✦ Operating Mode ✦
                 </div>
                 <div class="ornament-divider">
                     ──────────── ✦ ────────────
@@ -67,23 +67,27 @@
                 
                 <div class="activity-panel">
                     <div class="activity-title">
-                        ✦ Morning ✦ Activity 
+                        🚀 Launch
                     </div>
                     <div class="ornament-divider">
                         ───────── ✦ ─────────    
                                     </div>
 
                     <div id="activity">
-                        Read a book
+                        Loading tasks...
                     </div>
                     <div id="duration">
-                        30 mins
+                        <div>Next:</div>
+                        <div id="next-task">Loading...</div>
                     </div>
                     
                 </div>
                 <div class="agenda-panel">
                     <div class="agenda-title">
-                        Today's Agenda
+                        Current Status
+                    </div>
+                    <div class="ornament-divider">
+                        ───────── ✦ ─────────
                     </div>
                     <div id="agenda"></div>
                 </div>
@@ -96,123 +100,26 @@
             <section class="capacity">
 
                 <div class="capacity-title">
-                    ✦ Capacity & Conditions ✦
+                    ✦ Mission Status ✦
                 </div>
-               
-                <div class="meter">
-                    <div class="meter-label">
-                        Energy
-                    </div>
-            
-                    <div class="lights" id="energy">
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-            
-                </div>
-                </div>
-            
-                   
-                
-                <div class="meter">
 
+                <div class="meter">
                     <div class="meter-label">
-                        Body
+                        Today's Mission
                     </div>
-                
-                    <div class="lights" id="body">
-                
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                
-                    </div>
-                
+                    <div class="meter-label" id="mission">Loading...</div>
                 </div>
                 <div class="meter">
-
                     <div class="meter-label">
-                        Focus
+                        Next Action
                     </div>
-                
-                    <div class="lights" id="focus">
-                
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                
-                    </div>
-                
+                    <div class="meter-label" id="next-action">Loading...</div>
                 </div>
                 <div class="meter">
-
                     <div class="meter-label">
-                        Mood Level
+                        Notes for Future Nova
                     </div>
-                
-                    <div class="lights" id="mood">
-                
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                
-                    </div>
-                
-                </div>
-                <div class="meter">
-
-                    <div class="meter-label">
-                        Sleep
-                    </div>
-                
-                    <div class="lights" id="sleep">
-                
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                        <span class="light active"></span>
-                
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                        <span class="light"></span>
-                
-                    </div>
-                
+                    <div class="meter-label" id="future-nova-notes">Loading...</div>
                 </div>
             
             </section>
@@ -225,6 +132,7 @@
     <script src="../js/clock.js"></script>
     <script src="../js/googleSheets.js"></script>
     <script src="../js/calendar.js"></script>
+    <script src="../js/notion.js"></script>
     <script src="../js/weather.js"></script>
 </body>
 </html>
